@@ -1,0 +1,89 @@
+@import "culori";
+
+$latime-buton: 400px;
+$inaltime-buton: 50px;
+$latime-buton-max1100: 200px;
+$latime-buton-max600: 150px;
+
+@mixin margine($dimensiune:10px){
+	margin: $dimensiune 0;
+}
+
+#mesaj-trimis{
+	text-align: center;
+}
+
+
+#text-titlu{
+	font-size: 80px;
+}
+
+@for $i from 1 through 2{
+	@for $j from 1 through 2{
+		.buton-#{$i}w-#{$j}h{
+			@include margine;
+			width: $latime-buton * $i + 55 * ($i - 1);
+			height: $inaltime-buton * $j;
+		}
+		@media(max-width:1100px){
+			.buton-#{$i}w-#{$j}h{
+				width: $latime-buton-max1100 * $i + 55 * ($i - 1);
+			}
+		}
+		@media(max-width:600px){
+			.buton-#{$i}w-#{$j}h{
+				width: $latime-buton-max600 * $i + 27.5 * ($i - 1);
+			}
+		}
+	}
+}
+
+.camp-spart{
+	width: 450px;
+	display: inline-block;
+	text-align: left;
+}
+
+.camp-simplu{
+	width: 900px;
+	display: inline-block;
+	text-align: left;
+}
+#container-central{
+	width: 1000px;
+	margin: 0 auto;
+}
+@media(max-width:1100px){
+	#container-central{
+		width: 600px;
+	}
+	.camp-simplu{
+		width: 500px;
+	}
+	.camp-spart{
+		width: 250px;
+	}
+}
+@media(max-width:600px){
+	#container-central{
+		width: 400px;
+	}
+	.camp-simplu{
+		width: 350px;
+	}
+	.camp-spart{
+		width: 175px;
+	}
+}
+
+.form-contact{
+	height: 94px;
+	text-align: center;
+}
+
+.buton-contact{
+	width: 100px;
+	height: 40px;
+	margin: 50px auto;
+	display: inline-block;
+}
