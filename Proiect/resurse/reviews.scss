@@ -1,0 +1,114 @@
+@import "culori";
+
+$latime-imagine: 216px;
+$inaltime-imagine: 152px;
+$inaltime-imagine-loading: 50px;
+$latime-imagine-loading: 50px;
+
+.container-reviews{
+    width: 1200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.buton-load{
+    margin: 0 100px 0 0;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.container-buton-load{
+    width: 1200px;
+    padding-top: 0px;
+    height: 100px;
+    text-align: right;
+}
+
+.container-review{
+    width: 950px;
+    height: 250px;
+    border: 5px solid black;
+    margin: 5px auto;
+}
+
+.titlu{
+    font-size: 40px;
+    margin-left: 50px;
+}
+
+.descriere{
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+.container-lateral{
+    width: 850-$latime-imagine;
+    height: 250px;
+    float: left;
+}
+
+.imagine{
+    background-image: url("../imagini/sprite.jpg");
+    border: 5px solid red;
+    width: $latime-imagine;
+    height: $inaltime-imagine;
+    float: right;
+    margin-top: 25px;
+    margin-right: 25px;
+    //margin: auto;
+}
+
+.imagine-loading{
+    background-image: url("../imagini/loading.png");
+    width: 50px;
+    height: 50px;
+    background-size: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#div-colapsat{
+    visibility: collapse;
+}
+
+@for $i from 0 through 5{
+    @for $j from 0 through 4{
+        .pozitie-#{$i}w-#{$j}h{
+            background-position: $i * -$latime-imagine $j * -$inaltime-imagine ;
+        }
+        .pozitie-loading-#{$i}w-#{$j}h{
+            background-position: $i * -$latime-imagine-loading $j * -$inaltime-imagine-loading ;
+        }
+    }
+}
+
+@media(max-width:1200px){
+    .container-reviews{
+        width: 600px;
+    }
+    .container-buton-load{
+        width: 600px;
+        text-align: center;
+    }
+    .container-review{
+        width: 500px;
+        height: 300px;
+    }
+    .imagine{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+
+    }
+    .container-lateral{
+        width: 475px;
+    }
+    .buton-load{
+        margin: 0;
+        float: none;
+        font-size: 20px;
+    }
+}
