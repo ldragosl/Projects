@@ -1,0 +1,33 @@
+<body>
+    <app-selector-pagina [index]=2></app-selector-pagina>
+    <div id = "search-bar">
+        <mat-form-field appearance="outline">
+            <mat-label>Cautare</mat-label>
+            <input (keyup.enter)="cautare()" [formControl]="campCautare" style="color:white" matInput placeholder="ex: Spider-Man">
+        </mat-form-field>
+        <button (click)="afisareMeniuSortare()" class="icon-button" mat-button>
+            <mat-icon class="icon" color="primary">sort</mat-icon>
+        </button>
+    </div>
+    <div class="container_centrat">
+        <div *ngFor="let componenta of filme" class = "film">
+            <br>
+            <mat-card>
+                <mat-card-title>{{componenta.nume}}</mat-card-title>
+                <div class="card-titlu-durata">
+                    <mat-card-subtitle>Regizor: {{componenta.regizor}}</mat-card-subtitle>
+                    <mat-card-subtitle>{{componenta.durata}} minute</mat-card-subtitle>
+                </div>
+                <mat-card-subtitle>Film din anul {{componenta.an}}</mat-card-subtitle>
+                <mat-card-content>{{componenta.descriere}}</mat-card-content>
+                <div class="buton-review">
+                    <button class = "buton-custom" color="primary" (click)="salveazaReview()" mat-raised-button>Adauga review</button>
+                    <app-review [stele]="componenta.stele" [nume]="componenta.nume"></app-review>
+                </div>
+            </mat-card>
+            <br>
+            <mat-divider>
+            </mat-divider>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,24 @@
+<body>
+    <div id="container_centrat">
+        <mat-card style="font-size: 50px;" class="primary-text">Login</mat-card>
+        <br><br><br><br><br>
+        <form [formGroup]="formLogin">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input style="color:white" matInput placeholder="cineva@domeniu.com" formControlName="username" required>
+                <mat-error *ngIf="formLogin.invalid">{{obtineEroareEmail()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Parola</mat-label>
+                <input type="password" style="color:white" matInput placeholder="Parola" formControlName="parola" required>
+                <mat-error *ngIf="formLogin.invalid">{{obtineEroareParola()}}</mat-error>
+            </mat-form-field>
+        </form>
+        <mat-checkbox [formControl]="tineMinte" style="color:white; margin:5px;">Tine-ma minte</mat-checkbox>
+        <div class="rand-butoane">
+            <button style="margin:5px;" class="buton-custom" mat-raised-button color="primary" (click)="login()" [disabled]="formLogin.invalid">Login</button> 
+            <button style="margin:5px;" class="buton-custom" mat-raised-button color="primary" (click)="inregistrare()" [disabled]="false">Inregistrare</button>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,22 @@
+#container_centrat{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container_bun_venit{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+body {
+  background-color: #363636;
+}
+.rand-butoane{
+  display: inline;
+}
+.buton-custom {
+  width: 110px;
+}

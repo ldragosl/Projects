@@ -1,0 +1,62 @@
+<body>
+    <app-selector-pagina [index]=3></app-selector-pagina>
+    <div class="container_central">
+        <p class="text-contacteaza">Contacteaza-ne</p>
+        <br><br><br>
+        <mat-stepper linear #stepper>
+            <mat-step [stepControl]="formGeneral" [editable]="true">
+              <form [formGroup]="formGeneral">
+                <ng-template matStepLabel>Introdu numele filmului</ng-template>
+                <mat-form-field appearance="fill">
+                  <mat-label>Nume</mat-label>
+                  <input style="color:white" matInput formControlName="campNume" placeholder="Spider-man" required>
+                </mat-form-field>
+                <div>
+                  <button style="color:white" mat-button color="white" matStepperNext>Mai departe</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step [stepControl]="formDetalii" [editable]="true">
+              <form [formGroup]="formDetalii">
+                <ng-template matStepLabel>Introdu niste detalii despre film</ng-template>
+                <mat-form-field appearance="fill">
+                    <mat-label>Regizor</mat-label>
+                    <input style="color:white" matInput formControlName="campRegizor" placeholder="Steven Spielberg" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Anul aparitiei</mat-label>
+                    <input style="color:white" matInput formControlName="campAn" placeholder="2016" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Durata in minute</mat-label>
+                    <input style="color:white" matInput formControlName="campDurataMinute" placeholder="93" required>
+                </mat-form-field>
+                <div>
+                  <button style="color:white" mat-button matStepperPrevious>Inapoi</button>
+                  <button style="color:white" mat-button matStepperNext>Mai departe</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step [stepControl]="formDescriere" [editable]="true">
+                <form [formGroup]="formDescriere">
+                  <ng-template matStepLabel>Introdu o scurta descriere a filmului</ng-template>
+                  <mat-form-field appearance="fill" class="full-width">
+                      <mat-label>Descriere</mat-label>
+                      <textarea style="color:white" matInput formControlName="campDescriere" placeholder="Un film foarte interesant" required></textarea>
+                  </mat-form-field>
+                  <div>
+                    <button style="color:white" mat-button matStepperPrevious>Inapoi</button>
+                    <button style="color:white" mat-button (click)="formFinalizat()" matStepperNext>Mai departe</button>
+                  </div>
+                </form>
+              </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Done</ng-template>
+              <p style="color:white">Filmul a fost adaugat in baza de date.</p>
+              <button style="color:white" mat-button (click)="stepper.reset()">Resetare</button>
+            </mat-step>
+          </mat-stepper>
+    </div>
+</body>

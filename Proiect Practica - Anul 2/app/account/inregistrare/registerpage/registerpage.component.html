@@ -1,0 +1,37 @@
+<body>
+    <div id="container_centrat">
+        <mat-card style="font-size: 50px;" class="primary-text">Inregistrare</mat-card>
+        <br><br>
+        <form [formGroup]="formInregistrare">
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input style="color:white" matInput placeholder="Mircea" formControlName="username" required>
+                <mat-error *ngIf="formInregistrare.invalid">{{obtineEroareUsername()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input style="color:white" matInput placeholder="cineva@domeniu.com" formControlName="email" required>
+                <mat-error *ngIf="formInregistrare.invalid">{{obtineEroareEmail()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline">
+                <mat-label>Parola</mat-label>
+                <input type="password" style="color:white" matInput placeholder="Parola1234" formControlName="parola" required>
+                <mat-error *ngIf="formInregistrare.invalid">{{obtineEroareParola()}}</mat-error>
+            </mat-form-field>
+            <br> 
+            <mat-form-field appearance="outline">
+                <mat-label>Confirma parola</mat-label>
+                <input type="password" style="color:rgb(90, 76, 76)" matInput placeholder="Parola1234" formControlName="confirmaParola" required>
+                <mat-error *ngIf="formInregistrare.invalid">{{obtineEraoreConfirmaParola()}}</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-checkbox style="color:white; margin:5px;" formControlName="termeni">Sunt de acord cu <a class="warn-text" href="/legal">Termenii</a></mat-checkbox>
+        </form>
+        <div class="rand-butoane">
+            <button style="margin:5px;" class="buton-custom" mat-raised-button color="primary" (click)="inregistrare()" [disabled]="formInregistrare.invalid">Inregistrare</button>
+            <button style="margin:5px;" class="buton-custom" mat-raised-button color="primary" (click)="login()">Inapoi la login</button> 
+        </div>
+    </div>
+</body>

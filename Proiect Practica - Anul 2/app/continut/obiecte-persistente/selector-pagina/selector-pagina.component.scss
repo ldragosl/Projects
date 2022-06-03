@@ -1,0 +1,20 @@
+#container{
+    background-color: rgba(61, 61, 61, 0.822);
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    display: inline;
+    width: 100vw;
+    height: 8%;
+    vertical-align: baseline;
+}
+.container-butoane{
+    vertical-align: text-bottom;
+    margin-left :10%;
+    top:50%;
+}
+.buton-custom {
+    width: 100px;
+    height: 40px;
+    font-size: 15px
+  }

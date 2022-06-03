@@ -1,0 +1,67 @@
+body{
+    background-color: #363636;
+    background-image:   linear-gradient(rgba(0, 0, 0, 0) 50%, #363636),
+                        url("/../../../assets/actiune.jpg");
+
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position:fixed;
+    right:0;
+    left:0;
+}
+
+.container_centrat{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+
+.film{
+    position: relative;
+    width: 700px;
+    left: 50%;
+}
+
+#search-bar{
+    display: flex;
+    flex-direction: row;
+    right: 10%;
+    height: 10%;
+    position: absolute;
+}
+
+mat-card{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.buton-review{
+    text-align: right;
+    display:flex;
+    flex-direction: row-reverse;
+}
+
+.buton-custom{
+    width: 130px;
+}
+
+.card-titlu-durata{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    transform: scale(2);
+ }
+
+ .icon-button{
+    height: 60px;
+ }
