@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cod\CoreMotor\CameraSpectator.cpp" />
+    <ClCompile Include="Cod\CoreMotor\ManagerResurse.cpp" />
+    <ClCompile Include="Cod\CoreMotor\MotorGrafic.cpp" />
+    <ClCompile Include="Cod\Cub.cpp" />
+    <ClCompile Include="Cod\Importatoare\ObiectStaticIdentificabil.cpp" />
+    <ClCompile Include="Cod\Importatoare\ObiectStaticIdentificabilStartup.cpp" />
+    <ClCompile Include="Cod\InteractiuneFizica\ActorInteractiv.cpp" />
+    <ClCompile Include="Cod\InteractiuneFizica\ActorStaticInteractiv.cpp" />
+    <ClCompile Include="Cod\InteractiuneFizica\DetectorColiziuniLiniar.cpp" />
+    <ClCompile Include="Cod\InteractiuneFizica\InformatieInteractiuniCub.cpp" />
+    <ClCompile Include="Cod\InteractiuneFizica\ObiectDebugareColiziuni.cpp" />
+    <ClCompile Include="Cod\Interfete\Actor.cpp" />
+    <ClCompile Include="Cod\Interfete\ActorRandabil.cpp" />
+    <ClCompile Include="Cod\Interfete\CameraClasificator.cpp" />
+    <ClCompile Include="Cod\Interfete\CameraJucator.cpp" />
+    <ClCompile Include="Cod\Interfete\Harta.cpp" />
+    <ClCompile Include="Cod\Interfete\InformatieInteractiuni.cpp" />
+    <ClCompile Include="Cod\Interfete\Material.cpp" />
+    <ClCompile Include="Cod\Interfete\MaterialTransparent.cpp" />
+    <ClCompile Include="Cod\Interfete\Resursa.cpp" />
+    <ClCompile Include="Cod\Interfete\Textura.cpp" />
+    <ClCompile Include="Cod\MaterialText.cpp" />
+    <ClCompile Include="Cod\MaterialWireframe.cpp" />
+    <ClCompile Include="Cod\ObiectStaticNormale.cpp" />
+    <ClCompile Include="Cod\ObiectStaticOBJ.cpp" />
+    <ClCompile Include="Cod\Shader.cpp" />
+    <ClCompile Include="Cod\TextRandabil.cpp" />
+    <ClCompile Include="Cod\TexturaBMP.cpp" />
+    <ClCompile Include="Cod\MaterialPhong.cpp" />
+    <ClCompile Include="Cod\ObiectStatic.cpp" />
+    <ClCompile Include="Cod\ActorObiectStatic.cpp" />
+    <ClCompile Include="Cod\Utilitati.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cod\CoreMotor\CameraSpectator.h" />
+    <ClInclude Include="Cod\CoreMotor\ManagerResurse.h" />
+    <ClInclude Include="Cod\CoreMotor\MotorGrafic.h" />
+    <ClInclude Include="Cod\Cub.h" />
+    <ClInclude Include="Cod\Importatoare\ObiectStaticIdentificabil.h" />
+    <ClInclude Include="Cod\Importatoare\ObiectStaticIdentificabilStartup.h" />
+    <ClInclude Include="Cod\InteractiuneFizica\ActorInteractiv.h" />
+    <ClInclude Include="Cod\InteractiuneFizica\ActorStaticInteractiv.h" />
+    <ClInclude Include="Cod\InteractiuneFizica\DetectorColiziuniLiniar.h" />
+    <ClInclude Include="Cod\InteractiuneFizica\InformatieInteractiuniCub.h" />
+    <ClInclude Include="Cod\InteractiuneFizica\ObiectDebugareColiziuni.h" />
+    <ClInclude Include="Cod\Interfete\Actor.h" />
+    <ClInclude Include="Cod\Interfete\ActorRandabil.h" />
+    <ClInclude Include="Cod\Interfete\CameraClasificator.h" />
+    <ClInclude Include="Cod\Interfete\CameraJucator.h" />
+    <ClInclude Include="Cod\Interfete\Harta.h" />
+    <ClInclude Include="Cod\Interfete\InformatieInteractiuni.h" />
+    <ClInclude Include="Cod\Interfete\Material.h" />
+    <ClInclude Include="Cod\Interfete\MaterialTransparent.h" />
+    <ClInclude Include="Cod\Interfete\Resursa.h" />
+    <ClInclude Include="Cod\MaterialText.h" />
+    <ClInclude Include="Cod\MaterialWireframe.h" />
+    <ClInclude Include="Cod\ObiectStaticNormale.h" />
+    <ClInclude Include="Cod\ObiectStaticOBJ.h" />
+    <ClInclude Include="Cod\Shader.h" />
+    <ClInclude Include="Cod\TextRandabil.h" />
+    <ClInclude Include="Cod\TexturaBMP.h" />
+    <ClInclude Include="Cod\directivePreprocesare.h" />
+    <ClInclude Include="Cod\Interfete\Textura.h" />
+    <ClInclude Include="Cod\MaterialPhong.h" />
+    <ClInclude Include="Cod\ObiectStatic.h" />
+    <ClInclude Include="Cod\ActorObiectStatic.h" />
+    <ClInclude Include="Cod\Utilitati.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shadere\ShaderFragmentPhong.glsl" />
+    <None Include="Shadere\ShaderFragmentText.glsl" />
+    <None Include="Shadere\ShaderFragmentWireframe.glsl" />
+    <None Include="Shadere\ShaderVertexWireframe.glsl" />
+    <None Include="Shadere\ShaderVertexPhong.glsl" />
+    <None Include="Shadere\ShaderVertexText.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReactPhysics3D\ReactPhysics3D.vcxproj">
+      <Project>{c2c19269-58c5-494c-8633-539d03bc718d}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{baa56cf3-50e6-42f5-a5ea-9aa8570f8caa}</ProjectGuid>
+    <RootNamespace>OpenGLproj</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MotorGrafic_OpenGL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib-vs2022</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;glfw3.lib;OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)Cod;$(SolutionDir)ReactPhysics3D;$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;glfw3.lib;OpenGL32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)lib-vs2022</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
